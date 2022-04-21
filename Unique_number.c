@@ -21,7 +21,7 @@ int main()
         }
         else if(d==4)
         {
-            k++;
+           k++; 
         }
         else if(d==5)
         {
