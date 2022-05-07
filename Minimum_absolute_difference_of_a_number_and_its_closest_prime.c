@@ -1,0 +1,75 @@
+#include<stdio.h>
+int main()
+{
+    int n,i,d=0,c=0,j=0,f=0,x=0,k=0;
+    scanf("%d",&n);
+    for(i=n;i<=500;i++)
+    {
+        c=0;
+        for(j=1;j<=i;j++)
+        {
+            if(i%j==0)
+            {
+                c++;
+            }
+        }
+        if(c==2)
+        {
+            d=i;
+            break;
+        }
+        else
+        {
+            continue;
+        }
+        break;
+    }
+    for(i=n;i>=0;i--)
+    {
+        c=0;
+        for(j=1;j<=i;j++)
+        {
+            if(i%j==0)
+            {
+                c++;
+            }
+        }
+        if(c==2)
+        {
+            k=i;
+            break;
+        }
+        else
+        {
+            continue;
+        }
+        break;
+    }
+    if(d>n)
+    {
+        f=d-n;
+    }
+    else
+    {
+        f=n-d;
+    }
+    if(k>n)
+    {
+        x=k-n;
+    }
+    else
+    {
+        x=n-k;
+    }
+   /* printf("%d",f);
+    printf("%d",x);*/
+    if(f<x)
+    {
+        printf("%d",f);
+    }
+    else
+    {
+        printf("%d",x);
+    }
+    return 0;
+}
