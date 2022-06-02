@@ -1,19 +1,31 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,j,k,l;
+    int n,i,j;
     scanf("%d",&n);
-    k=65+n-1;
-    l=n;
-    for(i=1;i<=n;i++)
+    int arr[n][n];
+    for(i=0;i<n;i++)
     {
-        for(j=1;j<=l;j++)
+        for(j=0;j<n;j++)
         {
-            printf("%c ",k);
+            scanf("%d",&arr[i][j]);
         }
-        l--;
-        k--;
+    }
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            if(i==j||i==n-j-1)
+            {
+                printf("x");
+            }
+            else
+            {
+                printf("0");
+            }
+        }
         printf("
 ");
     }
+    return 0;
 }
