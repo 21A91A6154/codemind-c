@@ -15,7 +15,7 @@ int main()
         {
             if(arr[i]==arr[j])
             {
-                if(arr[i]%2==0)
+                if(arr[i]%2!=1)
                 {
                 c++;
                 if(c==1)
