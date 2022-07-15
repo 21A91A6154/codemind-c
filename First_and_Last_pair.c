@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,k;
+    int n,i;
     scanf("%d",&n);
     int arr[n];
     for(i=0;i<n;i++)
@@ -12,10 +12,10 @@ int main()
     {
         for(i=0;i<n;i++)
         {
-            k=i;
             if(i<n/2)
             {
-            printf("%d %d ",arr[i],arr[(n-1)-k]);
+                printf("%d ",arr[i]);
+                printf("%d ",arr[n-1-i]);
             }
         }
     }
@@ -23,22 +23,13 @@ int main()
     {
         for(i=0;i<n;i++)
         {
-            k=i;
-            if(n/2!=k)
+            if(i<n/2)
             {
-                if(i<=n/2)
-                {
-                printf("%d %d ",arr[i],arr[(n-1)-k]);
-                }
-            }
-            else
-            {
-                if(i<=n/2)
-                {
-                printf("%d %d ",arr[i],0);
-                }
+                printf("%d ",arr[i]);
+                printf("%d ",arr[n-1-i]);
             }
         }
+        printf("%d %d",arr[n/2],0);
     }
     return 0;
 }
