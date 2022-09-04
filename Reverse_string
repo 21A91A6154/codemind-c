@@ -1,0 +1,29 @@
+#include<stdio.h>
+int main()
+{
+    char str[100],a[100];
+    scanf("%[^\n]s",str);
+    int c=0,i;
+    for(i=0;str[i]!='\0';i++)
+    {
+        if(str[i]!=' ')
+        {
+            c+=1;
+        }
+    }
+    c=c-1;
+    for(i=0;str[i]!='\0';i++)
+    {
+        if(str[i]!=' ')
+        {
+            a[c]=str[i];
+            c=c-1;
+        }
+    }
+    for(c=0;a[c]!='\0';c++)
+    {
+        printf("%c ",a[c]);
+    }
+    
+    
+}
